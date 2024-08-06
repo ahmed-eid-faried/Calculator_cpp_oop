@@ -89,6 +89,72 @@ public:
 		_result = sqrt(_result);
 		_ChangeOperation("Sqrt");
 	}
+	void Ln() {
+		_LastNumber = _result;
+		_perviseResult = _result;
+		_result = log(_result);
+		_ChangeOperation("Ln");
+	}
+	void Log10() {
+		_LastNumber = _result;
+		_perviseResult = _result;
+		_result = log10(_result);
+		_ChangeOperation("Log10");
+	}
+	void Sin() {
+		_LastNumber = _result;
+		_perviseResult = _result;
+		_result = sin(_result);
+		_ChangeOperation("Sin");
+	}
+	void Cos() {
+		_LastNumber = _result;
+		_perviseResult = _result;
+		_result = cos(_result);
+		_ChangeOperation("Cos");
+	}
+	void Tan() {
+		_LastNumber = _result;
+		_perviseResult = _result;
+		_result = tan(_result);
+		_ChangeOperation("Tan");
+	}
+	void ArcSin() {
+		_LastNumber = _result;
+		_perviseResult = _result;
+		_result = asin(_result);
+		_ChangeOperation("ArcSin");
+	}
+	void ArcCos() {
+		_LastNumber = _result;
+		_perviseResult = _result;
+		_result = acos(_result);
+		_ChangeOperation("ArcCos");
+	}
+	void ArcTan() {
+		_LastNumber = _result;
+		_perviseResult = _result;
+		_result = atan(_result);
+		_ChangeOperation("ArcTan");
+	}
+	void Sinh() {
+		_LastNumber = _result;
+		_perviseResult = _result;
+		_result = sinh(_result);
+		_ChangeOperation("Sinh");
+	}
+	void Cosh() {
+		_LastNumber = _result;
+		_perviseResult = _result;
+		_result = cosh(_result);
+		_ChangeOperation("Cosh");
+	}
+	void Tanh() {
+		_LastNumber = _result;
+		_perviseResult = _result;
+		_result = tanh(_result);
+		_ChangeOperation("Tanh");
+	}
 
 };
 int main()
@@ -131,5 +197,43 @@ int main()
 	Calculator.PrintResult();
 
 	Calculator.CancelLastOperation();
+	Calculator.PrintResult();
+
+	Calculator.SetNumber(10);
+	Calculator.Sin();
+	Calculator.PrintResult();
+
+	Calculator.Cos();
+	Calculator.PrintResult();
+
+	Calculator.Tan();
+	Calculator.PrintResult();
+
+	Calculator.SetNumber(0.5);
+	Calculator.ArcSin();
+	Calculator.PrintResult();
+
+	Calculator.ArcCos();
+	Calculator.PrintResult();
+
+	Calculator.ArcTan();
+	Calculator.PrintResult();
+
+	Calculator.SetNumber(1);
+	Calculator.Sinh();
+	Calculator.PrintResult();
+
+	Calculator.Cosh();
+	Calculator.PrintResult();
+
+	Calculator.Tanh();
+	Calculator.PrintResult();
+
+	Calculator.SetNumber(2.71828);
+	Calculator.Ln();
+	Calculator.PrintResult();
+
+	Calculator.SetNumber(1000);
+	Calculator.Log10();
 	Calculator.PrintResult();
 }
